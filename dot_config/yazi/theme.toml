@@ -1,0 +1,24 @@
+[filetype]
+rules = [
+    # Deixa todas as pastas em azul claro
+    { name = "*/", fg = "cyan", bold = true },
+
+    # Fallback para todos os outros arquivos (opcional)
+    { name = "*", fg = "white" }
+]
+
+[mgr]
+border_style = { fg = "darkgray" }
+
+[mode]
+normal_main = { bg = "reset", fg = "reset" }
+normal_alt  = { bg = "reset", fg = "reset" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+
+
+
+

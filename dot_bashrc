@@ -1,0 +1,14 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='\[\e[38;5;250m\]┌─(\[\e[1;37m\]fajre\[\e[1;36m\]@\[\e[1;37m\]arch\[\e[1;36m\]linux\[\e[0m\])-[\[\e[1;34m\]\w\[\e[0m\]]\n\[\e[38;5;250m\]└─\$ '
+[ -r /home/fajre/.config/byobu/prompt ] && . /home/fajre/.config/byobu/prompt #byobu-prompt#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
