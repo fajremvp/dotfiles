@@ -1,0 +1,11 @@
+# ~/.bash_profile
+
+# Carrega ~/.bashrc
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Exibe cowsay + fortune no tty1 após login
+if [ "$(tty)" = "/dev/tty1" ]; then
+  if command -v fortune &>/dev/null && command -v cowsay &>/dev/null; then
+    fortune | cowsay -f "$(ls /usr/share/cowsay/cows | shuf -n 1)"
+  fi
+fi

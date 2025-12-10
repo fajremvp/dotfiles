@@ -1,0 +1,222 @@
+#Hyprland
+hyprctl clients #lista todas as janelas atualmente gerenciadas pelo hyprland
+
+==========================================================================
+
+#zathura
+k = vai para cima devagar/lentamente
+j = vai para baixo devagar/lentamente
+CTRL + U = vai para cima rápido/rapidamente
+CTRL + D = vai para baixo rápido/rapidamente
+SPACE = vai uma página inteira para baixo
+SHIFT + SPACE = vai uma página inteira para cima
+CTROL + SCROLL = zoom/aproximar/distanciar
+G + G = vai para o início do pdf
+SHIFT + G = vai para o final do pdf
+/ = localizar/pesquisar/buscar/achar/encontrar
+N = navegar/próximo entre os pointers encontrados
+SHIFT + N = navegar/anterior entre os pointers encontrados
+: = ir até o número da página digitado
+Q = fecha o pdf
+fazer seleção + apertar botão do scroll #copiar e colar
+
+==========================================================================
+
+#mat2
+mat2 arquivo.jpg              # remove metadados e cria 'arquivo.cleaned.jpg'
+mat2 -s arquivo.jpg           # mostra os metadados encontrados, sem alterar o arquivo
+mat2 -l arquivo.jpg           # lista apenas os metadados que podem ser removidos
+mat2 --inplace arquivo.jpg    # remove metadados sobrescrevendo o arquivo original
+mat2 -o saida.jpg arquivo.jpg # remove metadados e salva como 'saida.jpg'
+mat2 *.jpg                    # limpa metadados de todos os arquivos .jpg na pasta
+mat2 -L                       # lista todos os formatos suportados pelo mat2
+mat2 -v arquivo.jpg           # modo verbose (mostra detalhes da operação)
+mat2 -vv arquivo.jpg          # modo mais detalhado ainda
+mat2 -q arquivo.jpg           # modo quiet (só mostra erros)
+mat2 -V                       # mostra a versão do mat2
+mat2 -h                       # mostra a ajuda (manual de uso)
+
+==========================================================================
+
+#chezmoi
+chezmoi --version #Mostra a versão do chezmoi
+chezmoi init <repo-url> #Inicializa um gerenciamento de dotfiles a partir de um repositório remoto
+chezmoi init --aply <repo-url> #Inicializa o chezmoi numa máquina nova e aplica os arquivos (clone+apply)
+chezmoi add <arquivo/diretório> #Adiciona arquivos/diretórios no chezmoi
+chezmoi forget <arquivo/diretório> #Remove arquivos/diretórios do chezmoi (não apaga do disco)
+chezmoi re-add #Atualiza os arquivos/diretórios já gerenciados
+chezmoi apply #Aplica os arquivos já presentes localmente (sem clonar nada)
+chezmoi status #Mostra o status atual dos arquivos gerenciados, comparando o que está no chezmoi com o que está no sistema
+chezmoi list #Lista todos os arquivos que o chezmoi gerencia
+chezmoi diff #Mostra as diferenças entre os arquivos gerenciados no chezmoi e os do sistema
+#para botar no git:
+chezmoi cd #Vai para o diretório do chezmoi
+chezmoi re-add
+chezmoi git add .
+git add <arquivo/diretório> #Adiciona arquivos/diretórios para commit no repositório chezmoi
+git commit -m "mensagem" #Fazer commit das alterações
+chezmoi git push #Envia as alterações para o repositório remoto
+chezmoi git pull #Puxa atualizações do repositório remoto
+
+===========================================================================
+
+#GitHub
+git remote set-url origin git@github.com/fajremvp/repositorio.git
+
+===========================================================================
+
+#Vim/NVim
+ESC + i #comeca a inserir
+ESC + a #começa a inserir a partir do caractere afrente
+ESC + I #começa a inserir no começo da linha
+ESC + o #começa a inserir na linha debaixo
+ESC + O #começa a inserir na linha acima
+ESC + S #apaga a linha toda e ja entra em modo de inserção
+ESC + :w #salva sem sair
+ESC + :wq #salva e sai
+ESC + :q #sai, se você não modificou
+ESC + :q! #sai sem salvar
+ESC + yy #copia a linha que esta
+ESC + p #cola
+ESC + y<linhas abaixo>y #copia n linhas abaixo
+ESC + dd #apaga a linha inteira
+ESC + d<linhas abaixo>d #apaga n linhas abaixo
+ESC + v #entra no modo visual
+ESC ggVG #copia tudo (tipo um CTRL + A)
+ESC + :r <arquivo> #traz o conteúdo de outro arquivo
+ESC + / #localizar, depois indo para a próxima com "n"
+ESC + ? #localizar de baixo para cima, depois indo para a próxima com "n"
+ESC + :%s/<palavraAntiga>/<palavraNova>/g #Troca tudo de uma vez
+ESC + :e! <arquivo> #abrir outro arquivo
+ESC + :split <arquivo> #abrir outro arquivo na mesma tela
+ESC + CTRL + W + W #alterna entre os arquivos
+ESC + :.,$!sort #ordem alfabética
+ESC + u #desfazer
+ESC + CTRL + r #refazer
+ESC + set ignorecase #procura tanto maiúsculas quanto minúsculas
+
+===========================================================================
+
+#TransShell
+trans "hello world" #Traduz automaticamente do inglês para o idioma padrão do sistema
+trans en:pt "house" #Tradução de inglês (en) para português (pt)
+trans -b en:pt "good morning" #Mostra só a tradução, sem explicações
+trans -d en:pt house #Mostra significado, sinônimos, frases exemplo
+trans -p en:pt "good night" #Mostra tradução + toca o áudio da pronúncia (Google TTS)
+trans -sp en: "good night" #Só fala o texto, sem mostrar tradução
+trans -i arquivo.txt -o traduzido.txt ru:en #Traduz o conteúdo de um arquivo e salva em outro
+trans -I #Abre um prompt onde você pode digitar frases e ir traduzindo em tempo real
+trans :pt "guten tag" #: sem origem faz o trans detectar automaticamente o idioma
+trans -play "good night" #Fala a frase traduzida automaticamente
+trans "texto" #tradução rápida
+trans en:pt "texto" #origem/destino fixo
+trans -b #só a tradução
+trans -d #dicionário completo
+trans -p #com pronúncia
+trans -i arquivo.txt → lê o conteúdo do arquivo de entrada
+trans -o traduzido.txt → salva a tradução no arquivo de saída
+
+===========================================================================
+
+#Atualização semanal do sistema
+
+sudo pacman -Syu
+yay -Syu
+flatpak update -y
+
+===========================================================================
+
+#Linux geral
+
+sudo rfkill unblock wifi #Caso o wifi esteja bloqueado
+history #histórico de comandos
+clear #limpa o terminal
+whoami #quem sou eu
+CTRL + R #buscar
+CTROL + R #navegadr nas buscas
+<comando> >> <arquivo.txt> #joga o resultado do comando para um arquivo
+ps aux | grep <serviço rodando> #nos processos, busca o serviço específico
+lsusb #lista todos os USBs
+
+#Navegação e visualização de arquivos
+ls #lista arquivos e diretórios
+ls -a #inclui arquivos ocultos
+ls -l #exibe em formato de lista detalhada
+ls -la #lista detalhada + arquivos ocultos
+ls -lh #tamanhos legíveis
+cd /caminho #muda de diretório
+cd ~ #vai para /home/fajre (Tilde Expansion)
+cd #igual cd ~
+cd $HOME #igual cd ~
+cd .. #volta um diretória atrás
+cd - #volta para o último diretório acessado
+pwd #onde estou/print working directory
+
+#Manipulação de arquivos e diretórios
+cp <arquivo> <destino> #copia arquivo
+cp -r <diretório> <destino> #copia diretório
+mv <origem> <destino> #move ou renomeia
+rm <arquivo> #remove arquivo
+rm -r <pasta> #remove diretório
+rm -rf #remove forçado, sem perguntar
+mkdir <diretório> #cria novo diretório
+mkdir -p projetos/{java,java2/app} #cria estrutura de diretórios
+touch <arquivo.extensaoDoArquivo> #cria um arquivo vazio ou atualiza a data de um já existente (timestamp/última modificação)
+
+#Pesquisa e filtros
+find <diretório> -name "*.txt" #Procura todos os arquivos .txt nesse diretório
+grep "senha" <arquivo> #Procura a(s) linha(s) que contém o texto senha dentro do arquivo, linha por linha
+grep -r "senha" <diretório> #Procura a(s) linha(s) que contém o texto senha dentro desse diretório
+grep -i "senha" <arquivo> #Procura a(s) linha(s) ignorando maiúsculas/minúsculas (-i = insensitive case) (Vai encontrar senha, Senha, SENHA, seNha, etc...)
+grep -v "senha" <arquivo> #Mostra tudo exceto as linhas que contém "senha"
+locate <arquivo> #Busca arquivos muito rápido, mas usa um banco de dados pré-indexado
+sudo updatedb #Deve ser rodado caso seja criado ou movido arquivos novos e o locate ainda não os encontra (usar junto com o locate)
+which <comando> #Mostra onde está o executável de um comando no sistema
+
+#Informações do sistema
+uname -r #versão do kerner
+uname -a #tudo sobre o kernel
+uptime #tempo ligado e carga
+top #processos ativos em tempo real
+free -h #uso da RAM
+df -h #uso de disco por partição
+du -sh <diretório> #tamanho da pasta
+ps aux #lista todos os processos
+kill PID #termina processo
+kill -9 PID #termina forçadamente
+killall <nome> #mata por nome
+sudo reboot #reinicia o sistema
+shutdown now #desliga o sistema
+
+#Gerenciamento de pacotes (pacman)
+sudo pacman -Syu #atualiza sistema
+sudo pacman -S <pacote> #instala pacote
+sudo pacman -Rns <pacote> #remove completamente o pacote
+sudo pacman -Ss <pacote> #busca pacote
+pacman -Qi <pacote> #informação sobre o pacote instalado
+pacman -Ql <pacote> #arquivos que um pacote instalou
+
+#Permissões e usuários
+chmod +x <arquivo> #dá permissão de execução
+chmod 755 <arquivo> #permissões rwxr-xr-x
+chown user:group <arquivo> #muda o dono e o grupo de um arquivo
+
+#Rede
+ping 8.8.8.8 #testa conexão com o dns do google
+ip a #mostra IP e interface
+nmcli device #mostra dispositivos de rede
+curl https://url #Mostra o HTML da página
+curl -L https://url #Segue redirecionamentos
+curl -I https://url #Mostra apenas os headers (útil para ver o código HTTP)
+wget -c -P ~/Downloads https://url #baixa/continua o download um arquivo da URL para a pasta Downloads
+
+#Leitura de arquivos
+cat <arquivo> #printa/exibe conteúdo
+tac <arquivo> #exibe de trás para frente
+less <arquivo> #leitura paginada
+head <arquivo> #primeiras 10 linhas
+head -n 20 <arquivo> #primeiras 20 linhas
+tail <arquivo> #últimas 10 linhas
+tail -n 20 <arquiv> #últimas 10 linhas
+tail -f <arquivo> #segue ao vivo no arquivo
+

@@ -1,0 +1,59 @@
+# Cache e arquivos temporários
+.cache/
+.config/*/Cache/
+.config/*/cache/
+.config/*/Cache_Data/
+.config/*/Cache/*
+.config/*/Cache_Data/*
+.local/share/recently-used.xbel
+.local/share/user-places.xbel*
+
+# Históricos do shell
+.bash_history
+.zsh_history
+
+# Arquivos sensíveis e chaves privadas
+.ssh/
+.gnupg/
+
+# Logs
+*.log
+ly-session.log
+
+# Diretórios de cache de aplicativos grandes (navegadores, IDEs etc.)
+.config/Chromium/
+
+# Arquivos de swap e backup de editores
+*~
+*.swp
+*.bak
+*.tmp
+
+# Diretórios pessoais grandes que não devem ir pro repo
+Downloads/
+Documents/
+Videos/
+Music/
+Pictures/
+Important/
+Faculdade/
+
+# Outras pastas temporárias ou específicas
+.npm/
+.yarn/
+
+# Lixo, caches e coisas pesadas
+.local/share/tenacity/
+.local/share/baloo/
+.local/share/chezmoi/        # evita incluir o próprio repositório chezmoi
+.local/share/flatpak/
+.local/share/gk/
+.local/share/gvfs-metadata/
+.local/share/iwctl/
+.local/share/kdenlive/
+.local/share/mime/
+.local/share/PrismLauncher/
+.local/share/remoteview/
+.local/share/Steam/
+.local/share/Trash/
+.local/share/vulkan/
