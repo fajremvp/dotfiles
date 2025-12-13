@@ -11,6 +11,12 @@ view = [
 play = [
     { run = 'mpv "$@"', orphan = true, desc = "Reproduzir mídia" },
 ]
+markdown = [
+    { run = 'apostrophe "$@"', orphan = true, desc = "Editar no Apostrophe" },
+]
+pdf = [
+  { run = 'zathura "$@"', desc = "Zathura", orphan = true }
+]
 
 [open]
 rules = [
@@ -18,5 +24,13 @@ rules = [
     { mime = "image/*", use = "view" },
     { mime = "video/*", use = "play" },
     { mime = "audio/*", use = "play" },
+    { name = "*.md", use = "markdown" },
+    { mime = "application/pdf", use = "pdf" }
+
+]
+
+[preview]
+prepend_previewers = [
+    { name = "*.md", run = "code" },
 ]
 
