@@ -108,9 +108,3 @@ chezmoi git push
 # Pulls updates from the remote repository (if changed on another machine)
 chezmoi git pull
 ```
-
------
-
-## 💡 Unlicense (public domain)
-
-“Only scarce resources are subject to property.” — Stephan Kinsella

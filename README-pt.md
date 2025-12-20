@@ -108,6 +108,3 @@ chezmoi git push
 # Puxa atualizações do repositório remoto (caso tenha alterado em outra máquina)
 chezmoi git pull
 ```
----
-## 💡 Unlicense (domínio público)
-“Apenas recursos escassos são passíveis de propriedade.” — Stephan Kinsella
