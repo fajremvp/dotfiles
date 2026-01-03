@@ -1,9 +1,8 @@
 [filetype]
 rules = [
-    # Deixa todas as pastas em azul claro
-    { name = "*/", fg = "cyan", bold = true },
-
-    # Fallback para todos os outros arquivos (opcional)
+    # Regra para pastas (usando MIME type)
+    { url = "*/", fg = "cyan", bold = true },
+    # Fallback para o resto
     { name = "*", fg = "white" }
 ]
 
@@ -17,8 +16,3 @@ normal_alt  = { bg = "reset", fg = "reset" }
 [status]
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
-
-
-
-
-

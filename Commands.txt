@@ -124,6 +124,9 @@ sudo pacman -Syu
 yay -Syu
 flatpak update -y
 
+yay
+flatpak update -y
+
 ===========================================================================
 
 #Linux geral
