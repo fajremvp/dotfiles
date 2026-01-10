@@ -12,6 +12,7 @@ apps=(
   "Blueman:blueman-manager"
   "ProtonVPN:protonvpn-app"
   "Anki:flatpak run net.ankiweb.Anki"
+  "Librewolf:librewolf"
   "VeraCrypt:veracrypt"
   "Bitwarden:flatpak run com.bitwarden.desktop"
   "Only Office:flatpak run org.onlyoffice.desktopeditors"
