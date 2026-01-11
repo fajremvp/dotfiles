@@ -3,7 +3,7 @@ show_hidden = true
 
 [opener]
 edit = [
-  { run = "vim \"$@\"", block = true, for = "unix" },
+    { run = 'kitty nvim "$@"', orphan = true },
 ]
 view = [
     { run = 'qimgv "$@"', orphan = true, desc = "Ver Imagem" },
@@ -20,13 +20,54 @@ pdf = [
 
 [open]
 rules = [
-    # Se for imagem, use o opener 'view' que criamos acima
     { mime = "image/*", use = "view" },
     { mime = "video/*", use = "play" },
     { mime = "audio/*", use = "play" },
     { name = "*.md", use = "markdown" },
-    { mime = "application/pdf", use = "pdf" }
-
+    { mime = "application/pdf", use = "pdf" },
+    { mime = "text/*", use = "edit" },
+    { name = "*.c", use = "edit" },
+    { name = "*.h", use = "edit" },
+    { name = "*.cpp", use = "edit" },
+    { name = "*.hpp", use = "edit" },
+    { name = "*.rs", use = "edit" },
+    { name = "*.py", use = "edit" },
+    { name = "*.sh", use = "edit" },
+    { name = "*.java", use = "edit" },
+    { name = "*.js", use = "edit" },
+    { name = "*.ts", use = "edit" },
+    { name = "*.jsx", use = "edit" },
+    { name = "*.tsx", use = "edit" },
+    { name = "*.go", use = "edit" },
+    { name = "*.lua", use = "edit" },
+    { name = "*.rb", use = "edit" },
+    { name = "*.php", use = "edit" },
+    { name = "*.kt", use = "edit" },
+    { name = "*.swift", use = "edit" },
+    { name = "*.scala", use = "edit" },
+    { name = "*.zig", use = "edit" },
+    { name = "*.nim", use = "edit" },
+    { name = "*.dart", use = "edit" },
+    { name = "*.sql", use = "edit" },
+    { name = "*.yaml", use = "edit" },
+    { name = "*.yml", use = "edit" },
+    { name = "*.toml", use = "edit" },
+    { name = "*.json", use = "edit" },
+    { name = "*.xml", use = "edit" },
+    { name = "*.ini", use = "edit" },
+    { name = "*.conf", use = "edit" },
+    { name = "*.cfg", use = "edit" },
+    { name = "*.env", use = "edit" },
+    { name = "*.make", use = "edit" },
+    { name = "Makefile", use = "edit" },
+    { name = "*.cmake", use = "edit" },
+    { name = "*.gradle", use = "edit" },
+    { name = "*.properties", use = "edit" },
+    { name = "*.tex", use = "edit" },
+    { name = "*.mdx", use = "edit" },
+    { url = "*.lua", use = "edit" },
+    { url = "*.json", use = "edit" }
+    # pq lua e json n funcionam?
 ]
 
 [preview]
