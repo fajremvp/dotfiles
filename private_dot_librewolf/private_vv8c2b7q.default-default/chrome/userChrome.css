@@ -1,0 +1,34 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#navigator-toolbox, #nav-bar, #TabsToolbar, #appcontent {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+:root {
+    --tabs-navbar-separator-style: none !important;
+}
+
+#TabsToolbar {
+    visibility: visible !important;
+    margin-top: 0px !important;
+    transform: translateY(0px) !important;
+}
+
+#nav-bar {
+    box-shadow: none !important;
+    border-top: none !important;
+}
+
+/* Cor da aba ativa (Idêntica à barra de pesquisa) */
+.tabbrowser-tab[selected] .tab-background {
+    background-color: var(--toolbar-field-background-color) !important; /* Puxa a cor original da barra */
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Efeito Hover nas abas inativas */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected]) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}

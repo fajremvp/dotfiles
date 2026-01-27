@@ -65,9 +65,8 @@ rules = [
     { name = "*.properties", use = "edit" },
     { name = "*.tex", use = "edit" },
     { name = "*.mdx", use = "edit" },
-    { url = "*.lua", use = "edit" },
-    { url = "*.json", use = "edit" }
-    # pq lua e json n funcionam?
+    { name = "*.lua", use = "edit" },
+    { name = "*.json", use = "edit" }
 ]
 
 [preview]

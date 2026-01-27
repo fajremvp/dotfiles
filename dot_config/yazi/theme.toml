@@ -1,7 +1,6 @@
 [filetype]
 rules = [
-    # Regra para pastas (usando MIME type)
-    { url = "*/", fg = "cyan", bold = true },
+    { url = "*/", fg = "#66DDFF", bold = true },
     # Fallback para o resto
     { name = "*", fg = "white" }
 ]
