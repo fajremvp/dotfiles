@@ -1,6 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#navigator-toolbox, #nav-bar, #TabsToolbar, #appcontent {
+#navigator-toolbox, #nav-bar, #TabsToolbar, #PersonalToolbar, #appcontent {
     background-color: transparent !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
@@ -16,9 +16,10 @@
     transform: translateY(0px) !important;
 }
 
-#nav-bar {
+#nav-bar, #PersonalToolbar {
     box-shadow: none !important;
     border-top: none !important;
+    border-bottom: none !important;
 }
 
 /* Cor da aba ativa (Idêntica à barra de pesquisa) */

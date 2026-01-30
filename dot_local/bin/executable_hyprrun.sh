@@ -1,6 +1,7 @@
 #!/bin/bash
 
 apps=(
+  "Librewolf:librewolf"
   "Chromium:chromium"
   "GIMP:gimp"
   "Pavucontrol:pavucontrol-qt"
@@ -11,8 +12,7 @@ apps=(
   "qBittorrent:qbittorrent"
   "Blueman:blueman-manager"
   "ProtonVPN:protonvpn-app"
-  "Anki:flatpak run net.ankiweb.Anki"
-  "Librewolf:librewolf"
+  "Anki:flatpak run net.ankiweb.Anki" 
   "VeraCrypt:veracrypt"
   "Bitwarden:flatpak run com.bitwarden.desktop"
   "Only Office:flatpak run org.onlyoffice.desktopeditors"
