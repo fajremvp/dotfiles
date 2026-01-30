@@ -16,6 +16,10 @@
     transform: translateY(0px) !important;
 }
 
+.titlebar-buttonbox-container {
+    display: none !important;
+}
+
 #nav-bar, #PersonalToolbar {
     box-shadow: none !important;
     border-top: none !important;
