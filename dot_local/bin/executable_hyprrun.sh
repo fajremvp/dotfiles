@@ -15,6 +15,7 @@ apps=(
   "Anki:flatpak run net.ankiweb.Anki" 
   "VeraCrypt:veracrypt"
   "Bitwarden:flatpak run com.bitwarden.desktop"
+  "Ente Auth:flatpak run io.ente.auth"
   "Only Office:flatpak run org.onlyoffice.desktopeditors"
   "S4F3-C0D3S:~/S4F3-C0D3S/S4F3-C0D3S.AppImage"
   "Virt Machine Manager:virt-manager"

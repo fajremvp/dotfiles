@@ -16,10 +16,14 @@ echo "Background escolhido: $RANDOM_BG"
 # 2. GERAR O TEMA
 cd minegrub || exit 1
 
-# A Mágica: Passamos "../$RANDOM_BG" como argumento para o Python.
-# Assim ele sabe qual imagem usar e não reclama da pasta vazia.
-# O 'echo ""' continua lá para pular a pergunta da frase (deixando aleatória).
-echo "" | python3 update_theme.py "../$RANDOM_BG"
+echo "Gerando tema com $RANDOM_BG..."
+
+# Trava de Segurança
+# Se o python falhar, o script para AQUI e avisa o erro.
+if ! echo "" | python3 update_theme.py "../$RANDOM_BG"; then
+    echo "❌ ERRO CRÍTICO: O script Python falhou. Nada foi alterado no boot."
+    exit 1
+fi
 
 cd ..
 
